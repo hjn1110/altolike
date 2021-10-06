@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: sampleGlow
-  m_Shader: {fileID: -6465566751694194690, guid: 3b85799264e8548d38bfa27387c16ae1,
+  m_Name: bloom
+  m_Shader: {fileID: -6465566751694194690, guid: 4621aa9b1f61240a4b9fb2eb03180ab1,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
@@ -25,11 +25,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Emission:
-        m_Texture: {fileID: 2800000, guid: c878afb99e9114bb9a63044eadb831bb, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9312669eb508e4d07a278e781f23b4c6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 88e70dd6b8aab46778762b51ea9c1f8d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9312669eb508e4d07a278e781f23b4c6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -43,7 +43,9 @@ Material:
     m_Floats:
     - _EnableExternalAlpha: 0
     m_Colors:
-    - Color_9EE04840: {r: 0.4528302, g: 0.31826273, b: 0.31826273, a: 0}
+    - Color0: {r: 0.5, g: 0, b: 0, a: 0}
+    - Color_9EE04840: {r: 1.1742086, g: 0.82705134, b: 0.82705134, a: 0}
+    - GlowColor: {r: 766.9961, g: 224.87843, b: 377.47452, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}

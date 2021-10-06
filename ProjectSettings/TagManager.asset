@@ -41,3 +41,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: sky
+    uniqueID: 3599003873
+    locked: 0
+  - name: light_bk
+    uniqueID: 1190509011
+    locked: 0
+  - name: landscape0
+    uniqueID: 3309503845
+    locked: 0
+  - name: landscape1
+    uniqueID: 1863811175
+    locked: 0
+  - name: light_f
+    uniqueID: 2096253955
+    locked: 0
+  - name: landscape2_Unlit
+    uniqueID: 2592895089
+    locked: 0
+  - name: ground
+    uniqueID: 2501429009
+    locked: 0
