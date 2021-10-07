@@ -329,7 +329,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 6.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -440,10 +440,33 @@ MonoBehaviour:
   TimeNow: 0
   sun: {fileID: 1202563258}
   light2D: {fileID: 1086808124}
+  sky: {fileID: 510020457}
+  global2D: {fileID: 1861364586}
   DawnLight: {r: 0.46507472, g: 0.5943396, b: 0.41211286, a: 0}
-  NoonLight: {r: 0.9150943, g: 0.87555295, b: 0.47912958, a: 0}
-  DuskLight: {r: 0.7058824, g: 0.39215687, b: 0.39215687, a: 0}
+  NoonLight: {r: 0.9137255, g: 0.54124963, b: 0.47843137, a: 0}
+  DuskLight: {r: 0.7075472, g: 0.29036137, b: 0.39106137, a: 0}
   NightLight: {r: 0, g: 0, b: 0, a: 1}
+  DawnLightI: 0.5
+  NoonLightI: 0.5
+  DuskLightI: 2
+  NightLightI: 0.5
+  DawnGlobal: {r: 0.39215687, g: 0.46666667, b: 0.7058824, a: 1}
+  NoonGlobal: {r: 0.23137255, g: 0.58431375, b: 1, a: 1}
+  DuskGlobal: {r: 0.39215687, g: 0.46666667, b: 0.7058824, a: 1}
+  NightGlobal: {r: 0.39215687, g: 0.46666667, b: 0.7058824, a: 1}
+  DawnGlobalI: 1
+  NoonGlobalI: 1.2
+  DuskGlobalI: 1
+  NightGlobalI: 1
+  intensity: 1
+  DawnSunGlow: {r: 0.6745098, g: 1.882353, b: 0.59607846, a: 4}
+  NoonSunGlow: {r: 1.9607843, g: 1.8666667, b: 0.5019608, a: 4}
+  DuskSunGlow: {r: 1.4980392, g: 0.4392157, b: 0.7372549, a: 4}
+  NightSunGlow: {r: 0, g: 0, b: 0, a: 4}
+  DawnSky: {r: 0.0627451, g: 0.07450981, b: 0.12156863, a: 1}
+  NoonSky: {r: 0.10083661, g: 0.12217873, b: 0.20754719, a: 1}
+  DuskSky: {r: 0.0627451, g: 0.07450981, b: 0.12156863, a: 1}
+  NightSky: {r: 0.0627451, g: 0.07450981, b: 0.12156863, a: 1}
 --- !u!4 &296007752
 Transform:
   m_ObjectHideFlags: 0
@@ -691,7 +714,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 40
   m_Sprite: {fileID: 21300000, guid: b07d295d40b4d44ddba706e80bd1fb48, type: 3}
-  m_Color: {r: 0.19215687, g: 0.20784314, b: 0.28235295, a: 1}
+  m_Color: {r: 0.18565324, g: 0.19930501, b: 0.26415092, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -772,7 +795,7 @@ SpriteRenderer:
   m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b7a96ad3cd6fd417a924f8b18b1d7ddb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.47058824}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -988,7 +1011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1d092838e4ca43c0a5f17e3e1eb6c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowColor: {r: 0.8509804, g: 0.76862746, b: 0.6431373, a: 0}
+  _glowColor: {r: 0, g: 0, b: 0, a: 0}
   glowMa: {fileID: 0}
 --- !u!212 &790334746
 SpriteRenderer:
@@ -1084,7 +1107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1d092838e4ca43c0a5f17e3e1eb6c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowColor: {r: 0.8509804, g: 0.76862746, b: 0.6431373, a: 0}
+  _glowColor: {r: 0, g: 0, b: 0, a: 0}
   glowMa: {fileID: 0}
 --- !u!212 &792671179
 SpriteRenderer:
@@ -1214,7 +1237,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1019776615}
   - component: {fileID: 1019776616}
-  - component: {fileID: 1019776617}
   m_Layer: 0
   m_Name: glow_mini
   m_TagString: Untagged
@@ -1254,7 +1276,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fef507588789c4b3e9aa1fb6a97457df, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1272,11 +1294,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2096253955
-  m_SortingLayer: 5
+  m_SortingLayerID: 1190509011
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d081649c65ddd4ea5b3f707733a12383, type: 3}
-  m_Color: {r: 0.9137255, g: 0.7411765, b: 0.6509804, a: 0.15686275}
+  m_Color: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 0.15686275}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1286,20 +1308,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1019776617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019776614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1d092838e4ca43c0a5f17e3e1eb6c63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  glowColor: {r: 0.8509804, g: 0.76862746, b: 0.6431373, a: 0}
-  glowMa: {fileID: 0}
 --- !u!1 &1028709210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,7 +1373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 1
-  m_FalloffIntensity: 0.5
+  m_FalloffIntensity: 0.643
   m_Color: {r: 0.7058824, g: 0.39215687, b: 0.39215687, a: 1}
   m_Intensity: 1.2
   m_LightVolumeOpacity: 0.376
@@ -1380,7 +1388,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 2
-  m_PointLightOuterRadius: 10
+  m_PointLightOuterRadius: 15
   m_PointLightDistance: 1
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -1559,7 +1567,7 @@ SpriteRenderer:
   m_SortingLayer: 6
   m_SortingOrder: 50
   m_Sprite: {fileID: 21300000, guid: 5500c1da43ec04410b1d811e0fc8a14a, type: 3}
-  m_Color: {r: 0.19607843, g: 0.20392157, b: 0.29411766, a: 1}
+  m_Color: {r: 0.24190101, g: 0.24971874, b: 0.33962262, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1640,7 +1648,7 @@ SpriteRenderer:
   m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 889cc1889383341078e5896d394d8474, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.47058824}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1680,7 +1688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1d092838e4ca43c0a5f17e3e1eb6c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowColor: {r: 2.9960785, g: 0.8784314, b: 1.4745098, a: 0}
+  _glowColor: {r: 0, g: 0, b: 0, a: 0}
   glowMa: {fileID: 0}
 --- !u!212 &1202563260
 SpriteRenderer:
@@ -1741,7 +1749,7 @@ Transform:
   m_GameObject: {fileID: 1202563258}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children:
   - {fileID: 1582304455}
   - {fileID: 1019776615}
@@ -1822,7 +1830,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 4fdc17e8d377c416a90b75ab8729c275, type: 3}
-  m_Color: {r: 0.15294118, g: 0.15686275, b: 0.24705882, a: 1}
+  m_Color: {r: 0.17902279, g: 0.18217672, b: 0.254717, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1958,7 +1966,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1582304455}
   - component: {fileID: 1582304456}
-  - component: {fileID: 1582304457}
   m_Layer: 0
   m_Name: glow_large
   m_TagString: Untagged
@@ -1998,7 +2005,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fef507588789c4b3e9aa1fb6a97457df, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2020,7 +2027,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 78cb88bcbc9fa4ba8a2cf7cfc7c7338d, type: 3}
-  m_Color: {r: 0.81960785, g: 0.30588236, b: 0.34117648, a: 0.11764706}
+  m_Color: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 0.11764706}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2030,20 +2037,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1582304457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1582304454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1d092838e4ca43c0a5f17e3e1eb6c63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  glowColor: {r: 0.8509804, g: 0.76862746, b: 0.6431373, a: 0}
-  glowMa: {fileID: 0}
 --- !u!1 &1754152726
 GameObject:
   m_ObjectHideFlags: 0

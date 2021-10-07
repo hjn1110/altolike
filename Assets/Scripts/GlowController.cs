@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class GlowController : MonoBehaviour
 {
-
+    
+    public Color glowColor { set { _glowColor = value; initBloom(); } get { return _glowColor; } }
+    [ColorUsage(false, true)]
+    public Color _glowColor;
+    
+    /*
     [ColorUsage(false, true)]
     public Color glowColor;
+    */
 
     [HideInInspector]
     public Material glowMa;
@@ -15,6 +21,14 @@ public class GlowController : MonoBehaviour
     {
         initGlowMa();
         initBloom();
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            initBloom();
+            Debug.Log(glowColor);
+        }
     }
 
     public virtual void initGlowMa()
@@ -28,5 +42,6 @@ public class GlowController : MonoBehaviour
         glowMa.SetColor("Color_9EE04840", glowColor);
     }
 
+     
 
 }
