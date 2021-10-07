@@ -436,6 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a5f458644c7540b388ec5f0dbf96339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoRun: 1
   Angle: 0
   TimeNow: 0
   sun: {fileID: 1202563258}
@@ -447,7 +448,7 @@ MonoBehaviour:
   DuskLight: {r: 0.7075472, g: 0.29036137, b: 0.39106137, a: 0}
   NightLight: {r: 0, g: 0, b: 0, a: 1}
   DawnLightI: 0.5
-  NoonLightI: 0.5
+  NoonLightI: 1
   DuskLightI: 2
   NightLightI: 0.5
   DawnGlobal: {r: 0.39215687, g: 0.46666667, b: 0.7058824, a: 1}
@@ -460,7 +461,7 @@ MonoBehaviour:
   NightGlobalI: 1
   intensity: 1
   DawnSunGlow: {r: 0.6745098, g: 1.882353, b: 0.59607846, a: 4}
-  NoonSunGlow: {r: 1.9607843, g: 1.8666667, b: 0.5019608, a: 4}
+  NoonSunGlow: {r: 1.9607843, g: 0.78467095, b: 0.50302833, a: 4}
   DuskSunGlow: {r: 1.4980392, g: 0.4392157, b: 0.7372549, a: 4}
   NightSunGlow: {r: 0, g: 0, b: 0, a: 4}
   DawnSky: {r: 0.0627451, g: 0.07450981, b: 0.12156863, a: 1}
@@ -714,7 +715,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 40
   m_Sprite: {fileID: 21300000, guid: b07d295d40b4d44ddba706e80bd1fb48, type: 3}
-  m_Color: {r: 0.18565324, g: 0.19930501, b: 0.26415092, a: 1}
+  m_Color: {r: 0.20403169, g: 0.22806157, b: 0.3301887, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1830,7 +1831,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 4fdc17e8d377c416a90b75ab8729c275, type: 3}
-  m_Color: {r: 0.17902279, g: 0.18217672, b: 0.254717, a: 1}
+  m_Color: {r: 0.18289427, g: 0.18289427, b: 0.2830189, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1946,7 +1947,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 5eda99b366317449ab3cc1f35ac032b2, type: 3}
-  m_Color: {r: 0.19215687, g: 0.20784314, b: 0.2627451, a: 1}
+  m_Color: {r: 0.16415983, g: 0.19266933, b: 0.2924528, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -22,14 +22,7 @@ public class GlowController : MonoBehaviour
         initGlowMa();
         initBloom();
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            initBloom();
-            Debug.Log(glowColor);
-        }
-    }
+     
 
     public virtual void initGlowMa()
     {

@@ -9,8 +9,8 @@ public class Sun : MonoBehaviour
     float a;
     float c = 6f;
     float b = 3f;
-    
 
+    public bool autoRun = true;
 
     [Range(0, 2* Mathf.PI+0.1f)]
     public float Angle = 0;
@@ -88,10 +88,13 @@ public class Sun : MonoBehaviour
         sunTrans = sun.transform;
         glowController = sun.GetComponent<GlowController>();
 
-
+        if (autoRun)
+        {
+            StartCoroutine(move());
+        }
     }
 
-    private void SunMove()
+    private void SunMove(float Angle)
     {
         a = Mathf.Sqrt(b * b + c * c);
 
@@ -175,11 +178,28 @@ public class Sun : MonoBehaviour
         }
 
     }
-
+    IEnumerator move()
+    {
+        while (autoRun)
+        {
+            Angle += Time.deltaTime * 1f;
+            if (Angle >= 2 * Mathf.PI)
+            {
+                Angle = 0;
+            }
+            SunMove(Angle);
+            yield return null;
+        }
+        
+    }
 
     private void Update()
     {
-        SunMove();
+        if (!autoRun)
+        {
+            SunMove(Angle);
+        }
+        
         LightChange();
 
     }
