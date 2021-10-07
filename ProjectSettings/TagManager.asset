@@ -13,12 +13,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Character
+  - MounTain
+  - Bush1
+  - Bush2
+  - fog
+  - light
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
   - name: sky
     uniqueID: 3599003873
     locked: 0
+  - name: water
+    uniqueID: 287946125
+    locked: 0
   - name: light_bk
     uniqueID: 1190509011
     locked: 0
@@ -64,4 +67,7 @@ TagManager:
     locked: 0
   - name: ground2
     uniqueID: 2501429009
+    locked: 0
+  - name: character
+    uniqueID: 3819485307
     locked: 0
