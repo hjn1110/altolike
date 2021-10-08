@@ -1,7 +1,21 @@
-# Altolike 2D Light Rendering
+#Altolike 2D rendering experiment
 
- Try to simply restore the lighting effects in Alto 's Adventure in 2d way ( excluding projection effects ).
+For personal study.
+
+Try to simply restore the lighting effects in Alto's Adventure in 2d way.
  
- Real-time color transformation by coloring grayscale images  with ambient light and 2D-point-light.
+Real-time color conversion is performed by coloring the grayscale image using ambient light and 2D spotlights.
  
- A better light occlusion effect has not been solved yet, but it could be achieved by adding raycast to control the intensity of the light.
+Based on the above, I may try more stylized processing to achieve more effects.
+ 
+completed:
+
+1. Imitate a scene of Alto, and achieve the effect of sunrise and sunset on the screen rendering.
+2. Imitate the scenes in "Star Wars: Vision" to achieve an ink-like style rendering and realize the reflection effect of the water surface.
+
+undone:
+
+1. Light block effect.
+2. Projection.
+3. Fluid physics.
+4. Ripples.
