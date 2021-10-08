@@ -7,6 +7,8 @@ Try to simply restore the lighting effects in Alto's Adventure in 2d way.
 Real-time color conversion is performed by coloring the grayscale image using ambient light and 2D spotlights.
  
 Based on the above, I may try more stylized processing to achieve more effects.
+
+The main purpose of the project is to use silhouette-like simple graphics as sprites, and use Unity's dynamic rendering technology as much as possible to explore low-cost stylized art schemes.
  
 completed:
 
