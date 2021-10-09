@@ -42,7 +42,7 @@ public class Boat : MonoBehaviour
     void Start()
     {
         defaultY = boatTrans.position.y;
-        //StartCoroutine(boatMove());
+        StartCoroutine(TimePass());
 
 
     }
@@ -101,23 +101,28 @@ public class Boat : MonoBehaviour
     }
 
 
-    void TimePass()
+    IEnumerator TimePass()
     {
-        TimeNow = (currentX - start) / (end - start);
-        if (currentX < start)
+        while (move)
         {
-            //direction = 1;
-        }
-        if (currentX > end)
-        {
-            //direction = -1;
-            currentX = start;
+            TimeNow = (currentX - start) / (end - start);
+            if (currentX < start)
+            {
+                //direction = 1;
+            }
+            if (currentX > end)
+            {
+                //direction = -1;
+                currentX = start;
+                boatTrans.position = new Vector3(currentX, defaultY, 0);
+                foreach (TrailRenderer trai in trais)
+                    trai.Clear();
+            }
+            currentX += Time.deltaTime * speed;
             boatTrans.position = new Vector3(currentX, defaultY, 0);
-            foreach (TrailRenderer trai in trais)
-            trai.Clear();
+            yield return null;
         }
-        currentX += Time.deltaTime * speed;
-        boatTrans.position = new Vector3(currentX, defaultY, 0);
+        
     }
 
     private void FixedUpdate()
@@ -126,7 +131,7 @@ public class Boat : MonoBehaviour
     }
     void Update()
     {
-        Invoke(nameof(TimePass), 0.01f);
+        //Invoke(nameof(TimePass), 0.01f);
 
         if (Time.frameCount % 2 == 0)
         {
