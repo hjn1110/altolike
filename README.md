@@ -22,3 +22,13 @@ undone:
 3. Fluid physics.
 4. Ripples.
 5. Dynamic fog.
+
+
+Effects achieved so far:
+![](https://github.com/onovich/Altolike/blob/main/Assets/Graphics/sample/IMB_gHJ8nm.GIF)
+![](https://github.com/onovich/Altolike/blob/main/Assets/Graphics/sample/IMB_7WBqEP.GIF)
+ 
+Examples of effects that can be simulated in theory with this method:
+![](https://github.com/onovich/Altolike/blob/main/Assets/Graphics/sample/IMG_0121.JPG)
+![](https://github.com/onovich/Altolike/blob/main/Assets/Graphics/sample/IMG_0150.JPG)
+![](https://github.com/onovich/Altolike/blob/main/Assets/Graphics/sample/IMG_0151.JPG)
