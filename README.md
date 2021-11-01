@@ -26,7 +26,7 @@ undone:
 
 Effects achieved so far:
 ![](https://github.com/onovich/Altolike/blob/main/Assets/Graphics/sample/IMB_gHJ8nm.GIF)
-![](https://github.com/onovich/Altolike/blob/main/Assets/Graphics/sample/IMB_7WBqEP.GIF)
+![](https://github.com/onovich/Altolike/blob/main/Assets/Graphics/sample/IMB_IXwO62.GIF)
  
 Examples of effects that can be simulated in theory with this method:
 ![](https://github.com/onovich/Altolike/blob/main/Assets/Graphics/sample/IMG_0121.JPG)
